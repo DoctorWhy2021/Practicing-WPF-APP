@@ -10,11 +10,14 @@
 
     <ItemGroup>
       <Folder Include="Fonts" />
-      <Folder Include="Images" />
       <Folder Include="MVVM\Model" />
-      <Folder Include="MVVM\View" />
-      <Folder Include="MVVM\ViewModel" />
-      <Folder Include="Theme" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Fonts\Itim-Regular.ttf" />
+      <Resource Include="Fonts\Itim-Regular.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
 </Project>
