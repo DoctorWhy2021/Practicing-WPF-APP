@@ -2,9 +2,9 @@
 
 namespace Practicing_WPF_APP.MVVM.View;
 
-public partial class DiscoveryView : UserControl
+public partial class SunInfoView : UserControl
 {
-    public DiscoveryView()
+    public SunInfoView()
     {
         InitializeComponent();
     }

@@ -1,11 +1,19 @@
-﻿using Practicing_WPF_APP.Core;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Practicing_WPF_APP.Core;
+using Practicing_WPF_APP.MVVM.Model;
 
 namespace Practicing_WPF_APP.MVVM.ViewModel;
 
 public class MainViewModel : ObservableObject
 {
     public RelayCommand HomeViewCommand { get; set; }
-    public RelayCommand DiscoveryViewCommand { get; set; }
+    public RelayCommand ImagesViewCommand { get; set; }
+    
+    public RelayCommand SunInfoCommand { get; set; }
+
+    
     
     
     
@@ -13,7 +21,9 @@ public class MainViewModel : ObservableObject
 
     public HomeViewModel HomeVM { get; set; }
 
-    public DiscoveryViewModel DicoveryVM { get; set; }
+    public ImagesViewModel ImagesVM { get; set; }
+
+    public SunInfoViewModel SunInfoVM { get; set; }
     
     public object CurrentView
     {
@@ -27,17 +37,25 @@ public class MainViewModel : ObservableObject
     public MainViewModel()
     {
         HomeVM = new HomeViewModel();
-        DicoveryVM = new DiscoveryViewModel();
+        ImagesVM = new ImagesViewModel();
+        SunInfoVM = new SunInfoViewModel();
         CurrentView = HomeVM;
+        APIHelper.InitializeClient();
 
         HomeViewCommand = new RelayCommand(o =>
         {
             CurrentView = HomeVM;
         });
         
-        DiscoveryViewCommand = new RelayCommand(o =>
+        ImagesViewCommand = new RelayCommand(o =>
         {
-            CurrentView = DicoveryVM;
+            CurrentView = ImagesVM;
+        });
+        
+        SunInfoCommand = new RelayCommand(o =>
+        {
+            CurrentView = SunInfoVM;
         });
     }
+
 }

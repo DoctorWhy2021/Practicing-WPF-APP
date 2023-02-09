@@ -10,7 +10,8 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
         
     <Window.DataContext>
         <viewModel:MainViewModel/>
@@ -48,17 +49,18 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Discovery"
+                <RadioButton Content="Images"
                              Height="50"
                              Foreground="White"
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DiscoveryViewCommand}"/>
-                <RadioButton Content="Featured"
+                             Command="{Binding ImagesViewCommand}"/>
+                <RadioButton Content="Sun Info"
                              Height="50"
                              Foreground="White"
                              FontSize="18"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding SunInfoCommand}"/>
             </StackPanel>
             
             <TextBox Grid.Column="1" Width="250"
