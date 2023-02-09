@@ -13,6 +13,18 @@
                    HorizontalAlignment="Left"></TextBlock>
         <Button Content="Load Sun Info"
                 Height="40"
-                Style="{StaticResource ControlButtonTheme}"/>
+                Style="{StaticResource ControlButtonTheme}"
+                x:Name="LoadSunInfoBtn"
+                Click="LoadSunInfoBtn_OnClick"/>
+        <TextBlock x:Name="sunriseText"
+                   Margin="20"
+                   FontSize="20"
+                   Foreground="White"
+                   FontFamily="/Fonts/#Itim Regular"/>
+        <TextBlock x:Name="sunsetText"
+                   Margin="20"
+                   FontSize="20"
+                   Foreground="White"
+                   FontFamily="/Fonts/#Itim Regular"/>
     </StackPanel>
 </UserControl>
