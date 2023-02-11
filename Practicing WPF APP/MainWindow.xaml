@@ -61,6 +61,12 @@
                              FontSize="18"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding SunInfoCommand}"/>
+                <RadioButton Content="Coins"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="18"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding CoinsViewCommand}"/>
             </StackPanel>
             
             <TextBox Grid.Column="1" Width="250"

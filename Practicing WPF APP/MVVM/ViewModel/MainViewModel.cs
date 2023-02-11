@@ -13,6 +13,8 @@ public class MainViewModel : ObservableObject
     
     public RelayCommand SunInfoCommand { get; set; }
 
+    public RelayCommand CoinsViewCommand { get; set; }
+
     
     
     
@@ -24,6 +26,8 @@ public class MainViewModel : ObservableObject
     public ImagesViewModel ImagesVM { get; set; }
 
     public SunInfoViewModel SunInfoVM { get; set; }
+
+    public CoinsViewModel CoinsVM { get; set; }
     
     public object CurrentView
     {
@@ -39,6 +43,7 @@ public class MainViewModel : ObservableObject
         HomeVM = new HomeViewModel();
         ImagesVM = new ImagesViewModel();
         SunInfoVM = new SunInfoViewModel();
+        CoinsVM = new CoinsViewModel();
         CurrentView = HomeVM;
         APIHelper.InitializeClient();
 
@@ -55,6 +60,11 @@ public class MainViewModel : ObservableObject
         SunInfoCommand = new RelayCommand(o =>
         {
             CurrentView = SunInfoVM;
+        });
+
+        CoinsViewCommand = new RelayCommand(o =>
+        {
+            CurrentView = CoinsVM;
         });
     }
 
